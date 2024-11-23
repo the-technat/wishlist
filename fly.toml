@@ -7,11 +7,16 @@ app = 'flatnotes-technat'
 primary_region = 'ams'
 
 [build]
-  image = 'dullage/flatnotes:latest'
+  image = 'dullage/flatnotes:v5.3.1'
+
+[deploy]
+  strategy = "rolling"
 
 [env]
   FLATNOTES_AUTH_TYPE = 'password'
   FLATNOTES_USERNAME = 'wunsch'
+  FLATNOTES_SESSION_EXPIRY_DAYS = '1'
+
 
 [[mounts]]
   source = 'data'
@@ -30,12 +35,12 @@ primary_region = 'ams'
     port = 8080
     type = 'http'
     interval = '15s'
-    timeout = '10s'
-    grace_period = '30s'
-    method = 'get'
+    timeout = '5s'
+    grace_period = '10s'
+    method = 'GET'
     path = '/health'
 
 [[vm]]
-  memory = '1gb'
+  memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
