@@ -1,4 +1,4 @@
-# wish
+# wishlist
 
 Repo to deploy family wishlist
 
