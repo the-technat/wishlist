@@ -9,4 +9,4 @@ According to [this doc](https://fly.io/docs/launch/continuous-deployment-with-gi
 - Before you deploy the app add some secrets:
   - `fly secrets set FLATNOTES_PASSWORD=<password> --stage`
   - `fly secrets set FLATNOTES_SECRET_KEY=<secret_key_here> --stage`
-- A custom domain was provisioned according to [this blog post](https://fly.io/blog/how-to-custom-domains-with-fly/) (after first deployment)
+- A custom domain was provisioned according to [this doc](https://fly.io/docs/networking/custom-domain/) (after first deployment)
